@@ -1,0 +1,170 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Ensure button and links are aligned */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transform: translateY(-2px);
+}
+
+.book-now-btn {
+    background: linear-gradient(135deg, #ff6347, #ff4500);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-left: 15px; /* Keep margin to separate from last link */
+    width: auto;       /* Ensure it stays inline */
+    margin-top: 0;     /* Remove top margin for inline positioning */
+}
+
+
+.book-now-btn:hover {
+    background: linear-gradient(135deg, #ff4500, #ff6347);
+    transform: translateY(-2px);
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center; /* Center align everything */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        width: auto;            /* Adjust width to fit content */
+        margin-top: 10px;
+        align-items: center;    /* Center align links */
+    }
+
+    .nav-links li {
+        margin: 5px 0;         /* Reduce margin for vertical spacing */
+        text-align: center;
+    }
+
+    .book-now-btn {
+        margin-top: 10px;
+        width: auto;            /* Keep it inline with the links */
+        margin-left: 0;         /* Remove left margin */
+        padding: 8px 20px;      /* Adjust padding for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: auto;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .book-now-btn {
+        margin-top: 10px;
+        width: auto;
+        margin-left: 0;
+        padding: 8px 20px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+}
