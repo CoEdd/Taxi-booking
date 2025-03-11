@@ -291,6 +291,88 @@ footer {
     background-color: #f1f1f1;
 }
 
+/* FAQ Section */
+#faq {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item input[type="checkbox"] {
+    display: none; /* Hide the checkbox */
+}
+
+.faq-question {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background-color: #f9f9f9;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 15px 0;
+    color: #555;
+}
+
+/* Show the answer when the checkbox is checked */
+.faq-item input[type="checkbox"]:checked ~ .faq-answer {
+    max-height: 200px; /* Adjust based on content length */
+    padding: 15px;
+}
+
+/* Add a rotation effect to the question label */
+.faq-question::after {
+    content: '+';
+    float: right;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.faq-item input[type="checkbox"]:checked + .faq-question::after {
+    transform: rotate(45deg); /* Rotate the '+' symbol to indicate open state */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
@@ -357,6 +439,10 @@ footer {
     .rates-table {
         font-size: 0.9em;
     }
+
+    .faq-question {
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -383,5 +469,9 @@ footer {
 
     .rates-table {
         font-size: 0.8em;
+    }
+
+    .faq-question {
+        font-size: 0.9em;
     }
 }
