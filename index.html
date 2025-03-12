@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taxi Service</title>
+
+    <!-- External CSS Libraries -->
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">     
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+        crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- ============================== HEADER SECTION ============================== -->
     <header>
         <div class="navbar">
             <div class="logo">
@@ -24,7 +39,10 @@
             </nav>
         </div>
     </header>
+
+    <!-- ============================== MAIN CONTENT ============================== -->
     <main>
+        <!-- ============================== HOME SECTION ============================== -->
         <section id="home">
             <div class="hero">
                 <div class="hero-content">
@@ -37,6 +55,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- ============================== BOOKING SECTION ============================== -->
         <section id="booking">
             <h2>Booking</h2>
             <p>Select your preferred car type and book now!</p>
@@ -57,6 +77,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- ============================== RATES SECTION ============================== -->
         <section id="rates">
             <h2>Rates</h2>
             <p>Check our competitive and transparent rates from KLIA to popular destinations.</p>
@@ -102,59 +124,187 @@
                 </tbody>
             </table>
         </section>
+
+        <!-- ============================== FAQ SECTION ============================== -->
         <section id="faq">
-            <h2>FAQ</h2>
-            <p>Frequently asked questions and answers.</p>
-            <div class="faq-container">
-                <!-- FAQ Item 1 -->
-                <div class="faq-item">
-                    <input type="checkbox" id="faq1">
-                    <label for="faq1" class="faq-question">How do I book a taxi?</label>
-                    <div class="faq-answer">
-                        <p>You can book a taxi by visiting our website, selecting your preferred car type, and entering your pickup and drop-off locations. Alternatively, you can call us at (123) 456-7890.</p>
+            <div class="container">
+                <div class="row py-5 justify-content-center align-items-center">
+                    <!-- Section Title -->
+                    <div class="col-md-8 col-sm-11 text-center">
+                        <div class="section-title mb-5">
+                            <h2 class="fs-1 fw-bold text-light">
+                                FREQUENTLY ASKED QUESTIONS
+                            </h2>
+                        </div>
                     </div>
-                </div>
-                <!-- FAQ Item 2 -->
-                <div class="faq-item">
-                    <input type="checkbox" id="faq2">
-                    <label for="faq2" class="faq-question">What are your operating hours?</label>
-                    <div class="faq-answer">
-                        <p>We operate 24/7, so you can book a ride anytime, day or night.</p>
-                    </div>
-                </div>
-                <!-- FAQ Item 3 -->
-                <div class="faq-item">
-                    <input type="checkbox" id="faq3">
-                    <label for="faq3" class="faq-question">Do you offer airport transfers?</label>
-                    <div class="faq-answer">
-                        <p>Yes, we provide airport transfers to and from KLIA and other major airports in Malaysia.</p>
-                    </div>
-                </div>
-                <!-- FAQ Item 4 -->
-                <div class="faq-item">
-                    <input type="checkbox" id="faq4">
-                    <label for="faq4" class="faq-question">Can I cancel my booking?</label>
-                    <div class="faq-answer">
-                        <p>Yes, you can cancel your booking up to 2 hours before the scheduled pickup time without any charges.</p>
-                    </div>
-                </div>
-                <!-- FAQ Item 5 -->
-                <div class="faq-item">
-                    <input type="checkbox" id="faq5">
-                    <label for="faq5" class="faq-question">What payment methods do you accept?</label>
-                    <div class="faq-answer">
-                        <p>We accept cash, credit/debit cards, and online payments via e-wallets like GrabPay and Touch 'n Go.</p>
+
+                    <div class="col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
+                        <div class="accordion" id="questions">
+                            <!-- FAQ Item 1 -->
+                            <div
+                                class="accordion-item my-4"
+                                data-aos="fade-right"
+                                data-aos-easing="ease-in"
+                                data-aos-once="true"
+                            >
+                                <h2 class="accordion-header" id="heading-1">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#question-1"
+                                        aria-expanded="false"
+                                        aria-controls="question-1"
+                                    >
+                                        How do I book a taxi?
+                                    </button>
+                                </h2>
+                                <div
+                                    id="question-1"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="heading-1"
+                                    data-bs-parent="#questions"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            You can book a taxi by visiting our website, selecting your preferred car type, and entering your pickup and drop-off locations. Alternatively, you can call us at (123) 456-7890.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 2 -->
+                            <div
+                                class="accordion-item my-4"
+                                data-aos="fade-left"
+                                data-aos-easing="ease-in"
+                                data-aos-once="true"
+                            >
+                                <h2 class="accordion-header" id="heading-2">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#question-2"
+                                        aria-expanded="false"
+                                        aria-controls="question-2"
+                                    >
+                                        What are your operating hours?
+                                    </button>
+                                </h2>
+                                <div
+                                    id="question-2"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="heading-2"
+                                    data-bs-parent="#questions"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            We operate 24/7, so you can book a ride anytime, day or night.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 3 -->
+                            <div
+                                class="accordion-item my-4"
+                                data-aos="fade-right"
+                                data-aos-easing="ease-in"
+                                data-aos-once="true"
+                            >
+                                <h2 class="accordion-header" id="heading-3">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#question-3"
+                                        aria-expanded="false"
+                                        aria-controls="question-3"
+                                    >
+                                        Do you offer airport transfers?
+                                    </button>
+                                </h2>
+                                <div
+                                    id="question-3"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="heading-3"
+                                    data-bs-parent="#questions"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            Yes, we provide airport transfers to and from KLIA and other major airports in Malaysia.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 4 -->
+                            <div
+                                class="accordion-item my-4"
+                                data-aos="fade-left"
+                                data-aos-easing="ease-in"
+                                data-aos-once="true"
+                            >
+                                <h2 class="accordion-header" id="heading-4">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#question-4"
+                                        aria-expanded="false"
+                                        aria-controls="question-4"
+                                    >
+                                        Can I cancel my booking?
+                                    </button>
+                                </h2>
+                                <div
+                                    id="question-4"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="heading-4"
+                                    data-bs-parent="#questions"
+                                >
+                                    <div class="accordion-body">
+                                        <p>
+                                            Yes, you can cancel your booking up to 2 hours before the scheduled pickup time without any charges.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- ============================== CONTACT SECTION ============================== -->
         <section id="contact">
             <h2>Contact Us</h2>
             <p>Call us at (123) 456-7890 or email us at <a href="mailto:info@taxiservice.com">info@taxiservice.com</a>.</p>
         </section>
     </main>
+
+    <!-- ============================== FOOTER SECTION ============================== -->
     <footer>
         <p>&copy; 2023 Taxi Service. All rights reserved.</p>
     </footer>
+
+    <!-- External JS Libraries -->
+    <!-- Bootstrap JS (with Popper.js) -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            once: true, // Whether animation should happen only once
+        });
+    </script>
 </body>
 </html>

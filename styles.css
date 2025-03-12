@@ -1,6 +1,4 @@
-/* styles.css */
-
-/* General Reset */
+/* ============================== GENERAL RESET ============================== */
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +16,7 @@ body {
     margin: 0; /* Remove default body margin */
 }
 
+/* ============================== HEADER SECTION ============================== */
 header {
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
     color: white;
@@ -85,6 +84,7 @@ nav {
     transform: translateY(-2px);
 }
 
+/* ============================== HERO SECTION ============================== */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -155,6 +155,7 @@ nav {
     }
 }
 
+/* ============================== MAIN CONTENT ============================== */
 main {
     padding: 0;
     background-color: transparent;
@@ -176,6 +177,7 @@ section {
     border-radius: 0;
 }
 
+/* ============================== FOOTER SECTION ============================== */
 footer {
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
     color: white;
@@ -186,7 +188,7 @@ footer {
     box-sizing: border-box;
 }
 
-/* Booking Section */
+/* ============================== BOOKING SECTION ============================== */
 #booking {
     text-align: center;
     padding: 40px 20px;
@@ -252,7 +254,7 @@ footer {
     transform: translateY(-2px);
 }
 
-/* Rates Section */
+/* ============================== RATES SECTION ============================== */
 #rates {
     text-align: center;
     padding: 40px 20px;
@@ -291,89 +293,65 @@ footer {
     background-color: #f1f1f1;
 }
 
-/* FAQ Section */
+/* ============================== FAQ SECTION ============================== */
 #faq {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    background-image: radial-gradient(circle, 
+                    rgba(54, 81, 200, 0.75) -20%,
+                    rgba(0,0,0,1) 55%);
 }
 
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+#faq a {
+    text-decoration: none;
+    transition: all 0.4s ease-out;
 }
 
-.faq-item {
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
+#faq a:hover {
+    transform: scale(2);
 }
 
-.faq-item:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.accordion {
+    --bs-accordion-border-radius: 15px;
+    --bs-accordion-inner-border-radius: 15px;
+    --bs-accordion-btn-focus-box-shadow: 0;
+    --bs-accordion-border-width: 0;
 }
 
-.faq-item input[type="checkbox"] {
-    display: none; /* Hide the checkbox */
+.accordion-item {
+    background: linear-gradient(to right, #000000 0%, #4367ff 50%, #90b3e7 100%);
+    border-radius: 15px;
 }
 
-.faq-question {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+.accordion-body {
+    font-weight: 500;
+    background: linear-gradient(to right, #000000 0%, #4367ff 50%, #90b3e7 100%);
     color: white;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 15px;
-    width: 100%;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    transition: background 0.3s ease;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
-.faq-question:hover {
-    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+.accordion-button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: large;
+    color: white;
+    transition: all 0.4s ease-out;
+    background-image: url(./images/faq_card_cover.png);
+    background-size: cover;
+    border-radius: 15px;
 }
 
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 15px;
-    background-color: #f9f9f9;
-    transition: max-height 0.3s ease, padding 0.3s ease;
+.accordion-button:hover {
+    transform: scale(1.08);
+    color: #000000;
 }
 
-.faq-answer p {
-    font-size: 1em;
-    line-height: 1.6;
-    margin: 15px 0;
-    color: #555;
+.accordion-button:not(.collapsed) {
+    transform: scale(1);
+    --bs-accordion-active-color: #2b0963;
+    --bs-accordion-active-bg: #eae7f1;
 }
 
-/* Show the answer when the checkbox is checked */
-.faq-item input[type="checkbox"]:checked ~ .faq-answer {
-    max-height: 200px; /* Adjust based on content length */
-    padding: 15px;
-}
-
-/* Add a rotation effect to the question label */
-.faq-question::after {
-    content: '+';
-    float: right;
-    font-size: 1.5em;
-    transition: transform 0.3s ease;
-}
-
-.faq-item input[type="checkbox"]:checked + .faq-question::after {
-    transform: rotate(45deg); /* Rotate the '+' symbol to indicate open state */
-}
-
-/* Responsive Design */
+/* ============================== RESPONSIVE DESIGN ============================== */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
