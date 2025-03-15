@@ -23,6 +23,7 @@ header {
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%; /* Ensure it spans the full width */
+    margin: 0; /* Remove any margin */
 }
 
 .navbar {
@@ -96,7 +97,7 @@ nav {
     position: relative;
     overflow: hidden;
     width: 100%;
-    margin-top: 0;
+    margin-top: 0; /* Ensure no gap between header and hero section */
 }
 
 .hero-content {
@@ -161,13 +162,13 @@ main {
     background-color: transparent;
     box-shadow: none;
     border-radius: 0;
-    margin-top: 0;
+    margin-top: 0; /* Ensure no gap between hero and main content */
     width: 100%;
     box-sizing: border-box;
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Remove margin-bottom to eliminate gaps between sections */
     text-align: center;
     width: 100%;
     box-sizing: border-box;
@@ -186,6 +187,7 @@ footer {
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
     box-sizing: border-box;
+    margin-top: 0; /* Ensure no gap between last section and footer */
 }
 
 /* ============================== BOOKING SECTION ============================== */
@@ -194,7 +196,7 @@ footer {
     padding: 40px 20px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    margin-top: 0; /* Remove margin-top to eliminate gap */
 }
 
 .car-cards {
@@ -260,7 +262,7 @@ footer {
     padding: 40px 20px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    margin-top: 0; /* Remove margin-top to eliminate gap */
 }
 
 .rates-table {
@@ -299,6 +301,7 @@ footer {
                     rgba(255, 126, 95, 0.75) -20%, /* Orange gradient */
                     rgba(44, 62, 80, 1) 55%); /* Dark blue gradient */
     padding: 60px 20px; /* Add padding for better spacing */
+    margin-top: 0; /* Remove margin-top to eliminate gap */
 }
 
 #faq a {
@@ -363,6 +366,7 @@ footer {
     padding: 60px 20px;
     color: white;
     text-align: center;
+    margin-top: 0; /* Remove margin-top to eliminate gap */
 }
 
 .contact-container {
@@ -486,19 +490,6 @@ footer {
     transform: translateY(-2px);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-content,
-    .contact-form {
-        max-width: 100%;
-    }
-}
-
 /* ============================== RESPONSIVE DESIGN ============================== */
 @media (max-width: 768px) {
     .navbar {
@@ -555,11 +546,13 @@ footer {
         width: 100%;
         box-sizing: border-box;
         padding: 0px;
+        margin-bottom: 0; /* Ensure no margin-bottom */
     }
 
     footer {
         width: 100%;
         box-sizing: border-box;
+        margin-top: 0; /* Ensure no margin-top */
     }
 
     .rates-table {
@@ -568,6 +561,16 @@ footer {
 
     .faq-question {
         font-size: 1em;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-content,
+    .contact-form {
+        max-width: 100%;
     }
 }
 
@@ -599,5 +602,31 @@ footer {
 
     .faq-question {
         font-size: 0.9em;
+    }
+
+    .contact-title {
+        font-size: 2em;
+    }
+
+    .contact-subtitle {
+        font-size: 1em;
+    }
+
+    .contact-info .info-item i {
+        font-size: 1.2em;
+        margin-right: 10px;
+    }
+
+    .contact-info .info-item p {
+        font-size: 0.9em;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+    }
+
+    .submit-btn {
+        padding: 10px 25px;
     }
 }
