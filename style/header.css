@@ -1,0 +1,152 @@
+/* ============================== HEADER SECTION ============================== */
+header {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure it spans the full width */
+    margin: 0; /* Remove any margin */
+}
+
+/* Default Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transform: translateY(-2px);
+}
+
+.book-now-btn {
+    background: linear-gradient(135deg, #ff6347, #ff4500);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-left: 15px;
+}
+
+.book-now-btn:hover {
+    background: linear-gradient(135deg, #ff4500, #ff6347);
+    transform: translateY(-2px);
+}
+
+/* Default: Hide Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: white;
+}
+
+/* ============================== RESPONSIVE DESIGN ============================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 0px;
+        z-index: 1000;
+    }
+
+    nav {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    #menu-toggle:checked + .menu-icon + nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .book-now-btn {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px;
+    }
+}
