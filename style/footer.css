@@ -1,0 +1,23 @@
+/* ============================== FOOTER SECTION ============================== */
+footer {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0; /* Ensure no margin-top */
+}
+
+/* ============================== RESPONSIVE DESIGN ============================== */
+@media (max-width: 768px) {
+    footer {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Additional responsive styles for footer if needed */
+}

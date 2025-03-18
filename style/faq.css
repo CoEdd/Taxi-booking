@@ -1,0 +1,77 @@
+/* ============================== FAQ SECTION ============================== */
+#faq {
+    background-image: radial-gradient(circle, 
+                    rgba(255, 126, 95, 0.75) -20%, /* Orange gradient */
+                    rgba(44, 62, 80, 1) 55%); /* Dark blue gradient */
+    padding: 60px 20px; /* Add padding for better spacing */
+    margin-top: 0; /* Remove margin-top to eliminate gap */
+}
+
+#faq a {
+    text-decoration: none;
+    transition: all 0.4s ease-out;
+}
+
+#faq a:hover {
+    transform: scale(1.1); /* Slightly scale up on hover */
+    color: #ff6347; /* Orange color for hover */
+}
+
+.accordion {
+    --bs-accordion-border-radius: 15px;
+    --bs-accordion-inner-border-radius: 15px;
+    --bs-accordion-btn-focus-box-shadow: 0;
+    --bs-accordion-border-width: 0;
+}
+
+.accordion-item {
+    background: linear-gradient(to right, #2c3e50 0%, #ff7e5f 50%, #feb47b 100%); /* Dark blue to orange gradient */
+    border-radius: 15px;
+    margin-bottom: 15px; /* Add spacing between accordion items */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+.accordion-body {
+    font-weight: 500;
+    background: linear-gradient(to right, #2c3e50 0%, #ff7e5f 50%, #feb47b 100%); /* Match accordion-item gradient */
+    color: white;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.accordion-button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: large;
+    color: white;
+    transition: all 0.4s ease-out;
+    background-image: linear-gradient(to right, #2c3e50 0%, #ff7e5f 50%, #feb47b 100%); /* Match overall theme gradient */
+    background-size: cover;
+    border-radius: 15px;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.accordion-button:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+    color: #ff6347; /* Orange color for hover */
+}
+
+.accordion-button:not(.collapsed) {
+    transform: scale(1);
+    --bs-accordion-active-color: #ff6347; /* Orange color for active state */
+    --bs-accordion-active-bg: rgba(255, 255, 255, 0.1); /* Semi-transparent white for active background */
+}
+
+/* ============================== RESPONSIVE DESIGN ============================== */
+@media (max-width: 768px) {
+    .faq-question {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-question {
+        font-size: 0.9em;
+    }
+}
