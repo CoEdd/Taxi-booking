@@ -30,6 +30,7 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <!-- ============================== HEADER SECTION ============================== -->
@@ -328,8 +329,9 @@
                 </div>
 
                 <!-- Contact Form -->
+                <!-- Contact Form -->
                 <div class="contact-form">
-                    <form action="#" method="POST">
+                    <form id="contactForm" action="/send-email" method="POST">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Your Name" required>
                         </div>
@@ -342,6 +344,10 @@
                         <div class="form-group">
                             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
+
+                        <!-- reCAPTCHA Widget -->
+                        <div class="g-recaptcha" id="recaptcha" data-sitekey="6LdcqxQrAAAAAFUq60v3xJ-N1NDXeOc0gjscmyml"></div>
+
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
@@ -371,5 +377,52 @@
             once: true, // Whether animation should happen only once
         });
     </script>
+
+    <!-- Google reCAPTCHA v2(optional) -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            // Collect form data
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+    
+            // Send form data to the server
+            fetch('/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(result => {
+                if (result.success) {
+                    alert(result.message || 'Message sent successfully!');
+                    document.getElementById('contactForm').reset(); // Reset the form
+                    grecaptcha.reset(); // Reset the reCAPTCHA widget
+                } else {
+                    alert('Error: ' + result.message);
+                    grecaptcha.reset(); // Reset the reCAPTCHA widget
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error sending your message.');
+                grecaptcha.reset(); // Reset the reCAPTCHA widget
+            });
+        });
+    </script>
+
 </body>
 </html>
