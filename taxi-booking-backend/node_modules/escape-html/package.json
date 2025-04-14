@@ -10,8 +10,8 @@
   ],
   "repository": "component/escape-html",
   "devDependencies": {
-    "benchmark": "1.0.0",
-    "beautify-benchmark": "0.2.4"
+    "beautify-benchmark": "0.2.4",
+    "benchmark": "1.0.0"
   },
   "files": [
     "LICENSE",
@@ -20,5 +20,8 @@
   ],
   "scripts": {
     "bench": "node benchmark/index.js"
+  },
+  "dependencies": {
+    "escape-html": "file:"
   }
 }
